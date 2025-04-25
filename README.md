@@ -134,6 +134,12 @@ This project was developed for academic purposes. Contributions are not actively
 - **Regulatory Compliance**:
   - Medical certifications for health monitoring.
   - Integration with healthcare providers.
+![image](https://github.com/user-attachments/assets/a91be9f6-9950-47ac-b6f4-22c58fef82f9) ![image](https://github.com/user-attachments/assets/ce8f4ed2-9a41-4065-8436-ddd756896e43)
+![image](https://github.com/user-attachments/assets/d8a823c3-b2ef-4026-9b76-e3f03b4db903) ![image](https://github.com/user-attachments/assets/54e29a9c-5ddd-47e8-b1f5-54b193a5c363)
+![image](https://github.com/user-attachments/assets/32577477-5054-4192-adc5-555660210881) ![image](https://github.com/user-attachments/assets/10ad68cb-5d98-46ad-9648-225d823f111c)
+
+
+
 
 
 ## References
