@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="246dp"
+        android:text="Login"
+        android:textColor="#191D31"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/text_aviro"
+        android:layout_width="191dp"
+        android:layout_height="51dp"
+        android:layout_alignTop="@id/login_title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-121dp"
+        android:layout_marginEnd="85dp"
+        android:background="@android:color/black"
+        android:letterSpacing="-0.17"
+        android:text="FITGUARD"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/login_title"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/border"
+        android:hint="Email or Phone Number"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="#191D31" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/editTextEmail"
+        android:layout_marginTop="43dp"
+        android:background="@drawable/border"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="#191D31" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/editTextPassword"
+        android:layout_marginTop="30dp"
+        android:autoSizeMaxTextSize="25sp"
+        android:background="@drawable/black_rounded_button"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/googlebutton"
+        android:layout_width="84dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/login_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="144dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/google_logo"
+        android:contentDescription="Login with Google" />
+
+    <TextView
+        android:id="@+id/sign_up_text"
+        android:layout_width="113dp"
+        android:layout_height="34dp"
+        android:layout_below="@id/googlebutton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="136dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:textColor="#191D31"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</RelativeLayout>

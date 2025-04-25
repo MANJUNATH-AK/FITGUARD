@@ -1,0 +1,75 @@
+<resources>
+    <string name="step_count">Steps: %1$d</string>
+    <string name="step_count_text">Steps: %1$d</string>
+    <string name="user_name">Name: </string>
+    <string name="user_age">Age: </string>
+    <string name="user_gender">Gender: </string>
+    <string name="day_button">Today</string>
+    <string name="week_button">Week</string>
+    <string name="month_button">Month</string>
+    <string name="model_loaded_successfully">Model loaded successfully</string>
+    <string name="model_loading_failed">Model loading failed: %1$s</string>
+    <string name="heart_rate_format">Heart Rate: %d bpm</string>
+    <string name="steps_format">Steps: %1$d</string>
+    <string name="distance_format">Distance: %.2f km</string>
+    <string name="calories_format">Calories: %.2f kcal</string>
+    <string name="model_status">Model Status: Loading...</string>
+    <string name="steps">Steps: 0</string>
+    <string name="activity_unknown">Activity: Unknown</string>
+    <string name="standing_count">Standing Count: 0</string>
+    <string name="sitting_count">Sitting Count: 0</string>
+    <string name="laying_count">Laying Count: 0</string>
+    <string name="walking_count">Walking Count: 0</string>
+    <string name="walking_downstairs_count">Walking Downstairs Count: 0</string>
+    <string name="walking_upstairs_count">Walking Upstairs Count: 0</string>
+    <string name="daily_summary">Daily Summary</string>
+
+
+    <!-- Application Name -->
+    <string name="app_name">FIT GUARD</string>
+    <string name="prediction_result">Prediction: %1$s</string>
+
+
+    <string name="pedo_image">Pedometer Image</string>
+    <string name="feature_image">Feature Image</string>
+    <string name="bmi_image">BMI Image</string>
+
+    <!-- Profile Page Strings -->
+    <string name="EmailID">EmailID</string>
+    <string name="password">Password</string>
+    <string name="age_label">Age</string>
+    <string name="weight_label">Weight</string>
+    <string name="create_profile_btn">Create Profile</string>
+    <string name="gender_label">Gender</string>
+    <string name="male_label">Male</string>
+    <string name="female_label">Female</string>
+    <string name="save_btn">Save</string>
+    <string name="enter_your_name">Enter your Name</string>
+    <string name="confirmation_password">Confirmation Password</string>
+    <string name="reenter_password">Re-enter the Password</string>
+    <string name="kg">kg</string>
+    <string name="age">Age</string>
+    <string name="sample_age">23</string>
+    <string name="weight">Weight</string>
+    <string name="create_profile">Create Profile</string>
+
+
+    <!-- Error Messages -->
+    <string name="error_empty_username">Username cannot be empty</string>
+    <string name="error_empty_password">Password cannot be empty</string>
+    <string name="error_invalid_age">Please enter a valid age</string>
+    <string name="error_invalid_weight">Please enter a valid weight</string>
+    <string name="google_login_btn">Login with Google</string>
+    <string name="facebook_login_btn">Login with Facebook</string>
+
+    <!-- Other Labels -->
+    <string name="welcome_message">Welcome to FIT GUARD</string>
+    <string name="edit_profile">Edit Profile</string>
+
+    <!-- Accessibility Descriptions -->
+    <string name="female_profile_image_desc">Female profile image</string>
+    <string name="password_image_desc">Password icon</string>
+    <string name="age_image_desc">Age icon</string>
+    <string name="back_button_desc">Back button</string>
+    <string name="default_web_client_id" />
+</resources>

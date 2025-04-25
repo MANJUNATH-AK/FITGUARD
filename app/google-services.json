@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "714174934766",
+    "project_id": "fitguard-2661e",
+    "storage_bucket": "fitguard-2661e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714174934766:android:558476b89fc3bbae270dff",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714174934766-8ji17qc3m14bad42g9jc2ajhrhfehh90.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app",
+            "certificate_hash": "8fc6a780b9dbd6256dc44ee6017bedda49e8a892"
+          }
+        },
+        {
+          "client_id": "714174934766-rs8cf0qg0cu3gc0m5b73fl4dcbteu46g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYzy5bhR2nQZNx4QZOGK8oVRkEJ_2KXVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714174934766-rs8cf0qg0cu3gc0m5b73fl4dcbteu46g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

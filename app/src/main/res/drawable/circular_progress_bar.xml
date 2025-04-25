@@ -1,0 +1,36 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background circle (with border) -->
+    <item android:id="@android:id/background">
+        <!-- Outer ring to act as the border -->
+        <shape android:shape="ring"
+            android:innerRadiusRatio="3.1"
+            android:thicknessRatio="6"
+            android:useLevel="false">
+            <solid android:color="#10E1D7"/> <!-- Border color -->
+        </shape>
+    </item>
+
+    <!-- Actual progress background -->
+    <item>
+        <shape android:shape="ring"
+            android:innerRadiusRatio="3"
+            android:thicknessRatio="7"
+            android:useLevel="false">
+            <solid android:color="#038DCD" /> <!-- Progress background color -->
+        </shape>
+    </item>
+
+    <!-- Progress bar foreground -->
+    <item android:id="@android:id/progress">
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="270">
+            <shape android:shape="ring"
+                android:innerRadiusRatio="3"
+                android:thicknessRatio="7"
+                android:useLevel="true">
+                <solid android:color="#03ABCD" /> <!-- Progress color -->
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

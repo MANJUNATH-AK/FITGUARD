@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="teal_200">#03DAC5</color> <!-- Added Teal -->
+    <color name="orange">#FFA500</color> <!-- Added Orange -->
+    <color name="red">#FF0000</color> <!-- Added Red -->
+    <color name="light_gray">#D3D3D3</color> <!-- Light gray color -->
+    <color name="yellow">#E8A400</color> <!-- Light gray color -->
+    <color name="yellow_shade">#F0CB02</color> <!-- Light gray color -->
+
+    <color name="blue">#0000FF</color> <!-- Added Blue -->
+</resources>

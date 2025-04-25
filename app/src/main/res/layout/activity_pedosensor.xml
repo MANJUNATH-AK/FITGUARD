@@ -1,0 +1,80 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="100dp">  <!-- Added padding for better spacing -->
+
+        <!-- Predicted Activity Result -->
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@android:color/holo_orange_light"
+            android:contentDescription="Current activity status"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Activity: UNKNOWN"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />  <!-- Improved description -->
+
+        <!-- Time spent sitting -->
+        <TextView
+            android:id="@+id/sittingCountTextView"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Time spent sitting"
+            android:gravity="center"
+            android:text="Sitting Time: 0"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <!-- Time spent laying -->
+        <TextView
+            android:id="@+id/layingCountTextView"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Time spent laying"
+            android:gravity="center"
+            android:text="Laying Time: 0"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <!-- Time spent walking upstairs -->
+        <TextView
+            android:id="@+id/walkingUpstairsCountTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Walking Upstairs Time: 0"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Time spent walking upstairs" />
+
+        <!-- Time spent walking downstairs -->
+        <TextView
+            android:id="@+id/walkingDownstairsCountTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Walking Downstairs Time: 0"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Time spent walking downstairs" />
+
+        <!-- Step count -->
+
+    </LinearLayout>
+</ScrollView>

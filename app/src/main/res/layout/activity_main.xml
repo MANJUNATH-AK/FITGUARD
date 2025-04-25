@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activityflash">
+
+    <RelativeLayout
+        android:id="@+id/flash_layout"
+        android:layout_width="419dp"
+        android:layout_height="914dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- FITGUARD Text -->
+        <TextView
+            android:id="@+id/text_aviro"
+            android:layout_width="167dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="390dp"
+            android:letterSpacing="-0.17"
+            android:text="FITGUARD"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <!-- Activity TextView -->
+        <TextView
+            android:id="@+id/activityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_aviro"
+            android:layout_marginTop="20dp"
+            android:text="Activity: "
+            android:textSize="18sp"
+            android:textColor="@android:color/white" />
+
+        <!-- Steps TextView -->
+        <TextView
+            android:id="@+id/stepCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activityTextView"
+            android:layout_marginTop="16dp"
+            android:text="Steps: "
+            android:textSize="18sp"
+            android:textColor="@android:color/white" />
+
+        <!-- Activity Time TextView -->
+        <TextView
+            android:id="@+id/activityTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stepCountTextView"
+            android:layout_marginTop="16dp"
+            android:text="Activity Time: "
+            android:textSize="18sp"
+            android:textColor="@android:color/white" />
+
+        <!-- Three Circles (Already existing in the layout) -->
+        <RelativeLayout
+            android:layout_width="61dp"
+            android:layout_height="17dp"
+            android:layout_below="@id/text_aviro"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="5dp">
+
+            <View
+                android:id="@+id/first_circle"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:id="@+id/second_circle"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="22dp"
+                android:layout_toEndOf="@id/first_circle"
+                android:background="@drawable/circle_with_border" />
+
+            <View
+                android:id="@+id/third_circle"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="22dp"
+                android:layout_toEndOf="@id/second_circle"
+                android:background="@android:color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

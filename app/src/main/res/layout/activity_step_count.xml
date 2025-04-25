@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".StepCount">
+
+    <!-- Step Count CardView -->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_animation"
+        android:layout_width="280dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="App Animation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ani1" />
+
+    <ProgressBar
+        android:id="@+id/stepProgressBarUnique"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="276dp"
+        android:layout_height="276dp"
+        android:indeterminateOnly="false"
+        android:max="5000"
+        android:progress="0"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        app:layout_constraintBottom_toTopOf="@+id/stepCountCardUnique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.305" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/stepCountCardUnique"
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/card_background"
+        android:padding="20dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.554">
+
+        <!-- Background Image for Card -->
+        <ImageView
+            android:id="@+id/imageView2Unique"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:srcCompat="@drawable/card_background" />
+
+        <!-- LinearLayout for text elements -->
+        <LinearLayout
+            android:layout_width="229dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Distance Text with Icon -->
+            <LinearLayout
+                android:layout_width="188dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="16dp"
+                android:background="#FF5900"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_distance"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/distanceTextViewUnique"
+                    android:layout_width="148dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:background="#FF5900"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="#ffffff"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <!-- Calories Text with Icon -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#FF5900"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="29dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/ic_calories"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/caloriesTextViewUnique"
+                    android:layout_width="151dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:text="Calories"
+                    android:textColor="#ffffff"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <!-- Steps Text with Icon -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#FF5900"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="29dp"
+                    android:src="@drawable/ic_steps"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/stepCountTextViewUnique"
+                    android:layout_width="151dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:text="Steps"
+                    android:textColor="#ffffff"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
