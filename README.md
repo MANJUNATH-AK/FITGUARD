@@ -3,49 +3,62 @@
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
-- [Project Structure](#project-structure)
+- [Modules](#modules)
 - [Technologies Used](#technologies-used)
+- [Software and Hardware Requirements](#software-and-hardware-requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Security Note](#security-note)
 - [Contributing](#contributing)
 - [Future Scope](#future-scope)
+- [References](#references)
 - [Contact](#contact)
 - [License](#license)
 
 ## Overview
-FitGuard is an Android application developed to track fitness and health metrics, created by **Manjunath A K** 
+FitGuard is an innovative Android application developed by **Manjunath A K** 
 
-The app provides a user-friendly platform for monitoring physical activities, setting health goals, and promoting a healthy lifestyle, leveraging Android’s capabilities for real-time insights.
+FitGuard provides a radiation-free alternative to wearable fitness trackers by leveraging smartphone sensors to track fitness and health metrics. It integrates [machine learning](https://www.tensorflow.org/lite) (TensorFlow Lite), [Firebase](https://firebase.google.com/) for secure data management, and an intuitive interface to deliver real-time health insights, promoting a safer and healthier lifestyle.
 
 ## Features
-- **Activity Tracking**: Monitor steps, distance, and calories burned.
-- **Workout Logging**: Record workouts like running, cycling, and strength training.
-- **Health Metrics**: Track heart rate and sleep patterns (device-dependent).
-- **Goal Setting**: Set and track personalized fitness goals.
-- **User-Friendly Interface**: Intuitive design for seamless navigation.
-- **Backend Integration**: Uses [Google Cloud services](https://cloud.google.com/) (e.g., [Firebase](https://firebase.google.com/)) for data storage and synchronization.
+FitGuard offers a comprehensive suite of features:
+- **Step Counting**: Accurately tracks steps using the phone’s accelerometer with smoothing algorithms.
+- **Activity Recognition**: Uses [TensorFlow Lite](https://www.tensorflow.org/lite) to classify activities (e.g., sitting, walking, climbing stairs).
+- **BMI Calculation**: Computes Body Mass Index (BMI) based on user inputs (height, weight, age) and provides tailored health advice.
+- **Heart Rate and Blood Oxygen Monitoring**: Measures heart rate and blood oxygen levels using the phone’s camera and flashlight.
+- **Data Visualization**: Displays trends (e.g., BMI, step count) via interactive charts using [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart).
+- **Secure Data Management**: Stores user data securely in [Firebase Firestore](https://firebase.google.com/docs/firestore).
 
-*Note*: Refer to the project report for detailed functionality, as features may vary based on implementation.
-
-## Project Structure
-The project is documented in a comprehensive report, including:
-- **Introduction**: Project background and objectives.
-- **Abstract and Synopsis**: High-level overview and scope.
-- **Data Flow Diagram (**[DFD](https://en.wikipedia.org/wiki/Data-flow_diagram)**)**: Data flow within the app.
-- **E-R Diagram**: Database schema and relationships.
-- **System Design**: App architecture details.
-- **Implementation**: Codebase and development process.
-- **System Testing**: Functionality validation.
-- **Snapshots**: App interface screenshots.
-- **Conclusion and Future Scope**: Summary and potential enhancements.
+## Modules
+FitGuard’s modular architecture includes:
+- **User Authentication and Profile Management**: Secure login/signup via [Firebase Authentication](https://firebase.google.com/docs/auth).
+- **Activity Tracking**: Real-time activity prediction using accelerometer data and TensorFlow Lite.
+- **Health Metric Calculation**: Computes BMI, heart rate, and blood oxygen levels.
+- **Data Visualization**: Renders interactive charts for health metrics.
+- **Data Storage and Retrieval**: Manages data with [Firebase Firestore](https://firebase.google.com/docs/firestore).
+- **Notification and Alerts**: Sends reminders to encourage fitness goals.
 
 ## Technologies Used
 - **Platform**: [Android](https://www.android.com/)
-- **Development Tools**: [Android Studio](https://developer.android.com/studio), Java/Kotlin (assumed)
-- **Backend**: [Google Cloud](https://cloud.google.com/) services, likely [Firebase](https://firebase.google.com/)
-- **APIs**: Possible integration with [Google Fit](https://developers.google.com/fit)
-- **Database**: Local [SQLite](https://www.sqlite.org/) or cloud-based [Firestore](https://firebase.google.com/products/firestore)
+- **Development Tools**: [Android Studio](https://developer.android.com/studio), [Kotlin](https://kotlinlang.org/)
+- **Machine Learning**: [TensorFlow Lite](https://www.tensorflow.org/lite) for on-device activity recognition
+- **Backend**: [Firebase](https://firebase.google.com/) (Authentication, Firestore)
+- **Data Visualization**: [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
+- **APIs**: [Android Sensor API](https://developer.android.com/guide/topics/sensors), Camera API
+- **Libraries**:
+  - [Firebase UI Auth](https://github.com/firebase/FirebaseUI-Android) for authentication
+  - [Google Play Services](https://developers.google.com/android/guides/setup) for Google Sign-In
+  - [AndroidX](https://developer.android.com/jetpack/androidx) for UI components
+
+## Software and Hardware Requirements
+- **Software**:
+  - [Android Studio](https://developer.android.com/studio) (with Kotlin support)
+  - [TensorFlow Lite](https://www.tensorflow.org/lite)
+  - [Firebase](https://firebase.google.com/) (Authentication, Firestore)
+  - [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
+- **Hardware**:
+  - Android smartphone (minimum API level 24)
+  - Sensors: Accelerometer, Camera
 
 ## Installation
 1. **Clone the Repository**:
@@ -56,23 +69,24 @@ The project is documented in a comprehensive report, including:
    - Launch [Android Studio](https://developer.android.com/studio).
    - Select `Open an existing project` and choose the cloned repository folder.
 3. **Configure Dependencies**:
-   - Update `build.gradle` with required SDKs and dependencies (e.g., Firebase, Google Fit).
+   - Update `build.gradle` with required dependencies (e.g., Firebase, TensorFlow Lite).
    - Sync the project with Gradle.
 4. **Run the App**:
-   - Connect an Android device or use an emulator.
+   - Connect an Android device (API 24+) or use an emulator.
    - Build and run via Android Studio.
 
-*Important*: Remove sensitive files (e.g., `app/fitguard-2661e-7771427cfb1e.json`) and use environment variables or a secret manager for credentials.
+*Note*: Ensure sensitive files (e.g., `app/fitguard-2661e-7771427cfb1e.json`) are removed and credentials are managed securely.
 
 ## Usage
 1. **Launch the App**: Open FitGuard on your Android device.
-2. **Set Up Profile**: Enter details (e.g., age, weight) for personalized tracking.
-3. **Track Activities**: Start logging workouts or daily activities.
-4. **View Insights**: Access dashboards for progress monitoring.
-5. **Sync Data**: Connect to [Google Fit](https://www.google.com/fit/) or other services for enhanced tracking.
+2. **Sign Up/Login**: Use email/password or Google Sign-In via [Firebase Authentication](https://firebase.google.com/docs/auth).
+3. **Set Up Profile**: Enter details (e.g., age, weight, height) for personalized tracking.
+4. **Track Activities**: Monitor steps, activities, and health metrics (BMI, heart rate).
+5. **View Insights**: Access dashboards with interactive charts for progress tracking.
+6. **Receive Notifications**: Get reminders to stay active and meet fitness goals.
 
 ## Security Note
-A sensitive [Google Cloud Service Account key](https://cloud.google.com/iam/docs/service-account-creds) (`app/fitguard-2661e-7771427cfb1e.json`) was detected in the repository, triggering a [GitHub push protection error](https://docs.github.com/en/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line). To resolve:
+A [Google Cloud Service Account key](https://cloud.google.com/iam/docs/service-account-creds) (`app/fitguard-2661e-7771427cfb1e.json`) was detected in the repository, triggering a [GitHub push protection error](https://docs.github.com/en/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line). To resolve:
 - Remove the file from history using [git filter-repo](https://github.com/newren/git-filter-repo):
   ```bash
   git filter-repo --path app/fitguard-2661e-7771427cfb1e.json --invert-paths
@@ -81,7 +95,7 @@ A sensitive [Google Cloud Service Account key](https://cloud.google.com/iam/docs
   ```bash
   echo "app/fitguard-2661e-7771427cfb1e.json" >> .gitignore
   ```
-- Revoke the credential in [Google Cloud Console](https://console.cloud.google.com/) and use secure methods (e.g., [Firebase secrets](https://firebase.google.com/docs/projects/learn-more#secret-manager)) for API keys.
+- Revoke the credential in [Google Cloud Console](https://console.cloud.google.com/) and use secure methods (e.g., [Firebase secrets](https://firebase.google.com/docs/projects/learn-more#secret-manager)).
 
 ## Contributing
 This project was developed for academic purposes. Contributions are not actively sought, but feedback is welcome. To contribute:
@@ -101,13 +115,36 @@ This project was developed for academic purposes. Contributions are not actively
 5. Open a pull request.
 
 ## Future Scope
-- Integration with [Wear OS](https://wearos.google.com/) for wearable device support.
-- Social features like challenges or leaderboards.
-- Additional health metrics (e.g., blood pressure, glucose levels).
-- Expansion to [iOS](https://www.apple.com/ios/) for cross-platform support.
+- **Advanced Features**:
+  - Enhanced [TensorFlow Lite](https://www.tensorflow.org/lite) models for activity detection (e.g., running, cycling).
+  - AI-driven personalized fitness plans and sleep tracking.
+  - Diet tracking and calorie intake recommendations.
+- **Community Features**:
+  - Fitness challenges and leaderboards.
+  - Health forums for user interaction.
+- **Data Analytics**:
+  - Predictive analytics for health trends.
+  - Advanced, customizable visualizations.
+- **IoT and Wearable Integration**:
+  - Support for IoT devices (e.g., smart scales).
+  - Optional synchronization with [Wear OS](https://wearos.google.com/).
+- **Global Expansion**:
+  - Multi-language support and regional health advice.
+  - Enhanced offline capabilities.
+- **Regulatory Compliance**:
+  - Medical certifications for health monitoring.
+  - Integration with healthcare providers.
+
+
+## References
+- [Android Development Documentation](https://developer.android.com)
+- [TensorFlow Lite](https://www.tensorflow.org/lite)
+- [Firebase Documentation](https://firebase.google.com/docs)
+- [MPAndroidChart Library](https://github.com/PhilJay/MPAndroidChart)
 
 ## Contact
-For queries, contact Manjunath A K via the repository’s [issues section](https://github.com/MANJUNATH-AK/FITGUARD/issues) or through:
+For queries, contact Manjunath A K via the repository’s [issues section](https://github.com/MANJUNATH-AK/FITGUARD/issues) or:
+
 
 ## License
-This project is for academic purposes and not distributed under a specific license. All rights reserved by Manjunath A K 
+This project is for academic purposes and not distributed under a specific license. All rights reserved by Manjunath A K.
